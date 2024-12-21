@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:HelloWorld}",
+            "name": "Debug HelloWorld",
+            "program": "${workspaceFolder:HelloWorld}/.build/debug/HelloWorld",
+            "preLaunchTask": "swift: Build Debug HelloWorld"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:HelloWorld}",
+            "name": "Release HelloWorld",
+            "program": "${workspaceFolder:HelloWorld}/.build/release/HelloWorld",
+            "preLaunchTask": "swift: Build Release HelloWorld"
+        }
+    ]
+}

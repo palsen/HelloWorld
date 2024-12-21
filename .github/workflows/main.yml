@@ -8,9 +8,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install Swift 6.0.0
-      run: |
-        curl -O https://swift.org/builds/swift-6.0-release/xcode/swift-6.0-RELEASE/swift-6.0-RELEASE-osx.pkg
-        sudo installer -pkg swift-6.0-RELEASE-osx.pkg -target /
+    - name: Setup Swift 6.0
+      uses: fwal/setup-swift@v1
+      with:
+        swift-version: '6.0.0'
     - name: Build and test
       run: swift build && swift test
